@@ -9,6 +9,11 @@ const ProductSchema = new Schema({
         required: true,
         trim: true,
     },
+    category: {
+        type: String,
+        required: true,
+        trim: true,
+    },
     about: {
         type: String,
         required: false,
@@ -58,7 +63,7 @@ const ProductSchema = new Schema({
                 required: true,
             },
             comment: {
-                types: String,
+                type: String,
                 required: true,
             },
         },

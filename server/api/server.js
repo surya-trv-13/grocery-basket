@@ -1,9 +1,16 @@
-console.log("Start");
+const express = require("express");
+require("./database/mongoose");
+const { Product } = require("./models/product");
 
-setTimeout(()=> {
-    console.log("After 2 seconds");
-}, 2000)
+const app = express();
+const port = process.env.PORT;
 
-console.log("End");
+app.use(express.json());
 
-var x = "Surys";
+app.post("/", (req, res) => {
+    res.send("Connection Working" + req.body.user);
+});
+
+app.listen(port, () => {
+    console.log(`App Started at ${port}`);
+});
