@@ -2,7 +2,7 @@ import { combineReducers } from "redux";
 import inputValueReducer from "./inputValueReducer";
 
 const rootReducer = combineReducers({
-    inputValueReducer,
+	inputValueReducer,
 });
 
 export default rootReducer;
